@@ -1,406 +1,791 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mint.devv — Roblox Developer & Lua Scripter</title>
-  <meta name="description" content="mint.devv — Luau scripter specializing in backend systems, AI, and social gameplay mechanics. Python certified. Available for freelance work." />
-  <meta property="og:title" content="mint.devv — Roblox Developer" />
-  <meta property="og:description" content="Luau scripter building the things players actually feel." />
-  <meta property="og:type" content="website" />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mint.devv — Roblox Lua Developer</title>
+  <meta name="description" content="Roblox Lua developer & Python certified. Building games, systems, and scripts that actually work.">
+
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238b5cf6'/><text x='50%25' y='58%25' font-size='18' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='monospace' font-weight='bold'>m</text></svg>" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
+
 <body>
-
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-<header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="#" class="nav__logo" aria-label="mint.devv home">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" class="nav__logo-mark">
-        <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M8 22 L8 10 L13 18 L16 13 L19 18 L24 10 L24 22" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <span class="nav__logo-text"><span class="nav__logo-slash">//</span> mint.devv</span>
-    </a>
-    <nav class="nav__links">
-      <a href="#projects" class="nav__link">Projects</a>
-      <a href="#skills" class="nav__link">Skills</a>
-      <a href="#certifications" class="nav__link">Certs</a>
-      <a href="#contact" class="nav__link nav__link--cta">Hire me</a>
-    </nav>
-    <button class="nav__mobile-toggle" id="menuToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <nav class="nav__mobile" id="mobileMenu" aria-hidden="true">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certs</a>
-    <a href="#contact">Hire me</a>
-  </nav>
-</header>
 
 <main>
 
-  <!-- hero -->
-  <section class="hero" id="home">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__overlay" aria-hidden="true"></div>
-    <canvas id="particles" aria-hidden="true"></canvas>
+  <!-- sidebar -->
 
-    <div class="wrap hero__body">
-      <div class="hero__tag reveal">
-        <span class="hero__tag-dot"></span>
-        Roblox Developer
+  <aside class="sidebar" data-sidebar>
+
+    <div class="sidebar-info">
+
+      <figure class="avatar-box">
+        <img src="./assets/images/avatar.jpg" alt="mint.devv" width="80">
+      </figure>
+
+      <div class="info-content">
+        <h1 class="name" title="mint.devv">mint.devv</h1>
+        <p class="title">Roblox Lua Developer</p>
       </div>
-      <h1 class="hero__h1 reveal d1">
-        Building<br>
-        <span class="gr">Roblox</span><br>
-        <span id="typingTarget">worlds.</span><span class="t-cursor" id="typingCursor" aria-hidden="true"></span>
-      </h1>
-      <p class="hero__sub reveal d2">
-        Luau scripter specializing in backend systems, AI,<br class="br-desk">
-        and social gameplay mechanics.<br>
-        I build the things players actually feel.
-      </p>
-      <div class="hero__btns reveal d3">
-        <a href="#projects" class="btn btn-fill">View Work</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      </div>
+
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
+
     </div>
 
-    <div class="hero__stats reveal d4">
-      <div class="wrap">
-        <div class="stats">
-          <div class="stat">
-            <span class="stat__n">6</span>
-            <span class="stat__l">Systems Built</span>
+    <div class="sidebar-info_more">
+
+      <div class="separator"></div>
+
+      <ul class="contacts-list">
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="logo-github"></ion-icon>
           </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat__n">2+</span>
-            <span class="stat__l">Years Scripting</span>
+          <div class="contact-info">
+            <p class="contact-title">GitHub</p>
+            <a href="https://github.com/xtinctl3gend-cpu" target="_blank" class="contact-link">xtinctl3gend-cpu</a>
           </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat__n">100%</span>
-            <span class="stat__l">Luau</span>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="chatbubble-outline"></ion-icon>
           </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat__n">1</span>
-            <span class="stat__l">Live Game</span>
+          <div class="contact-info">
+            <p class="contact-title">Discord</p>
+            <button class="contact-link copy-discord" data-copy="kungfupandamaster">kungfupandamaster</button>
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="game-controller-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Roblox</p>
+            <a href="https://www.roblox.com/users/3128640302/profile" target="_blank" class="contact-link">mint.devv</a>
+          </div>
+        </li>
+
+        <li class="contact-item">
+          <div class="icon-box">
+            <ion-icon name="link-outline"></ion-icon>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">guns.lol</p>
+            <a href="https://guns.lol/mintdevv" target="_blank" class="contact-link">guns.lol/mintdevv</a>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="separator"></div>
+
+      <ul class="social-list">
+        <li class="social-item">
+          <a href="https://github.com/xtinctl3gend-cpu" target="_blank" class="social-link">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://www.roblox.com/users/3128640302/profile" target="_blank" class="social-link">
+            <ion-icon name="game-controller-outline"></ion-icon>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://www.freecodecamp.org/mintdevv" target="_blank" class="social-link">
+            <ion-icon name="code-slash-outline"></ion-icon>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="https://guns.lol/mintdevv" target="_blank" class="social-link">
+            <ion-icon name="link-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
+
     </div>
 
-    <div class="scroll-hint" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
+  </aside>
 
-  <!-- projects -->
-  <section class="section projects" id="projects">
-    <div class="wrap">
-      <div class="sec-header reveal">
-        <span class="sec-num">01</span>
-        <h2 class="sec-title">Selected Work</h2>
-      </div>
 
-      <div class="proj-grid">
+  <!-- right side -->
 
-        <!-- featured -->
-        <article class="card card--feat reveal">
-          <div class="card__media">
-            <video src="Muting_System.mp4" autoplay muted loop playsinline></video>
-          </div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag-live">Live ↗</span>
-              <span class="card__idx">01</span>
-            </div>
-            <h3 class="card__title">Muting System</h3>
-            <p class="card__desc">Proximity voice chat muting built for Ragebait VC — a social game where silence is a resource. Players mute specific users via server-side validation. Handles reconnects, spectator mode, and vote-mutes cleanly.</p>
-            <div class="card__tags">
-              <span class="pill">ProximityVoice API</span>
-              <span class="pill">RemoteEvents</span>
-              <span class="pill">Server Validation</span>
-              <span class="pill">UI Integration</span>
-            </div>
-            <a href="https://www.roblox.com/games/138606822153563/Ragebait-VC" class="card__link" target="_blank" rel="noopener">Play Ragebait VC <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
+  <div class="main-content">
 
-        <!-- secondary grid -->
-        <div class="proj-secondary">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <button class="navbar-link active" data-nav-link>About</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Skills</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Projects</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Certificates</button>
+        </li>
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Contact</button>
+        </li>
+      </ul>
+    </nav>
 
-          <article class="card reveal">
-            <div class="card__media-sm">
-              <video src="Pathfinding_Bot.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="card__body">
-              <div class="card__meta">
-                <span class="tag">AI / NPC</span>
-                <span class="card__idx">02</span>
-              </div>
-              <h3 class="card__title">Pathfinding Bot</h3>
-              <p class="card__desc">Uses PathfindingService (A* internally) to build a navmesh from all walkable parts at runtime. ComputeAsync() returns waypoints — the bot walks them with Humanoid:MoveTo(), skipping timed-out waypoints instead of restarting from scratch.</p>
-              <div class="card__tags">
-                <span class="pill">PathfindingService</span>
-                <span class="pill">A* Navmesh</span>
-                <span class="pill">ComputeAsync</span>
-                <span class="pill">Humanoid API</span>
-              </div>
-            </div>
-          </article>
 
-          <article class="card reveal">
-            <div class="card__media-sm">
-              <video src="Smart_Movement.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="card__body">
-              <div class="card__meta">
-                <span class="tag">AI / Movement</span>
-                <span class="card__idx">03</span>
-              </div>
-              <h3 class="card__title">Smart Movement</h3>
-              <p class="card__desc">Path computed once and walked start to finish. At each waypoint the angle between directions is measured — over 35° counts as a turn, slowing to WalkSpeed 7. A straightCount tracks consecutive straight waypoints — after 3 in a row it sprints at WalkSpeed 20.</p>
-              <div class="card__tags">
-                <span class="pill">Angle Detection</span>
-                <span class="pill">Dynamic WalkSpeed</span>
-                <span class="pill">Behavioural Logic</span>
-              </div>
-            </div>
-          </article>
+    <!-- about -->
 
-          <article class="card reveal">
-            <div class="card__media-sm">
-              <video src="Server-Side_Anti-Cheat.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="card__body">
-              <div class="card__meta">
-                <span class="tag">Security</span>
-                <span class="card__idx">04</span>
-              </div>
-              <h3 class="card__title">Server-Side Anti-Cheat</h3>
-              <p class="card__desc">Runs every 0.1s server-side across all players. Speed check flags over 32 studs/sec. Teleport check flags jumps over 50 studs. Flying check raycasts 4 studs down — sustained airtime over 4s triggers a flag. At 3 violations: log, warn, or kick.</p>
-              <div class="card__tags">
-                <span class="pill">Server-Side</span>
-                <span class="pill">Raycasting</span>
-                <span class="pill">Violation Stack</span>
-                <span class="pill">Heartbeat Loop</span>
-              </div>
-            </div>
-          </article>
+    <article class="about active" data-page="about">
 
-          <article class="card reveal">
-            <div class="card__media-sm">
-              <video src="DataStore_Coin_System.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="card__body">
-              <div class="card__meta">
-                <span class="tag">Backend</span>
-                <span class="card__idx">05</span>
-              </div>
-              <h3 class="card__title">DataStore — Coin System</h3>
-              <p class="card__desc">Each player's coins saved under player_USERID. On join GetAsync loads data and fires it to the client HUD via RemoteEvent. Auto-saves every 60s. BindToClose catches server shutdowns. All calls wrapped in pcall — a failed save never crashes the game.</p>
-              <div class="card__tags">
-                <span class="pill">DataStoreService</span>
-                <span class="pill">pcall Safety</span>
-                <span class="pill">BindToClose</span>
-                <span class="pill">Auto-Save</span>
-              </div>
-            </div>
-          </article>
+      <header>
+        <h2 class="h2 article-title">About me</h2>
+      </header>
 
-          <article class="card reveal">
-            <div class="card__media-sm">
-              <video src="1v1_Arena_Combat_AI.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="card__body">
-              <div class="card__meta">
-                <span class="tag">Game Loop + AI</span>
-                <span class="card__idx">06</span>
-              </div>
-              <h3 class="card__title">1v1 Arena & Combat AI</h3>
-              <p class="card__desc">CharacterAutoLoads disabled — the round manager owns all spawning. Five-state combat AI: CHASE → CIRCLE → ATTACK → DODGE → LUNGE, ticking every 0.03s. Pathfinding runs in its own task.spawn thread. Lunge fires between 8–14 studs on a 1.8s cooldown.</p>
-              <div class="card__tags">
-                <span class="pill">Finite State Machine</span>
-                <span class="pill">task.spawn</span>
-                <span class="pill">Heartbeat</span>
-                <span class="pill">Arena Bounds</span>
-              </div>
-            </div>
-          </article>
+      <section class="about-text">
+        <p>
+          I'm a Roblox Lua developer building game systems that actually hold up under real players.
+          Server-side logic is my thing — anti-cheat, datastores, NPC AI, combat systems — the stuff that's
+          invisible when it works and breaks everything when it doesn't.
+        </p>
+        <p>
+          Python-certified through Google &amp; Coursera. I use that to write automation scripts, build Discord bots,
+          handle data stuff, and basically extend what I can do beyond just Roblox. Fast, clean, gets the job done.
+        </p>
+      </section>
 
+
+      <!-- service cards -->
+      <section class="service">
+
+        <h3 class="h3 service-title">What I do</h3>
+
+        <ul class="service-list">
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <rect x="4" y="8" width="32" height="24" rx="4" stroke="#8b5cf6" stroke-width="2"/>
+                <path d="M12 16l4 4-4 4M20 24h8" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Lua Scripting</h4>
+              <p class="service-item-text">
+                Full game systems in Roblox Lua — server/client split, RemoteEvents, modulescript architecture.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <path d="M20 6L34 14V26L20 34L6 26V14L20 6Z" stroke="#8b5cf6" stroke-width="2"/>
+                <circle cx="20" cy="20" r="5" stroke="#8b5cf6" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">NPC & AI Systems</h4>
+              <p class="service-item-text">
+                FSM-based enemy AI, PathfindingService navigation, combat state machines, boss behavior trees.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <rect x="6" y="6" width="28" height="28" rx="4" stroke="#8b5cf6" stroke-width="2"/>
+                <path d="M12 20h16M20 12v16" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Anti-Cheat & Security</h4>
+              <p class="service-item-text">
+                Server-side validation, raycasting sanity checks, heartbeat loops, violation stacks that auto-kick exploiters.
+              </p>
+            </div>
+          </li>
+
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <path d="M8 32L16 12L24 24L30 18L36 32H8Z" stroke="#8b5cf6" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Data & Economy</h4>
+              <p class="service-item-text">
+                pcall-safe DataStore systems, coin economies, auto-save, BindToClose hooks — data that doesn't corrupt.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- quick stats -->
+      <section class="stats-row">
+        <div class="stat-box">
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Projects</span>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="stat-box">
+          <span class="stat-num">6&thinsp;</span>
+          <span class="stat-label">Certs</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Years</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Live Game</span>
+        </div>
+      </section>
 
-  <!-- skills -->
-  <section class="section skills" id="skills">
-    <div class="wrap">
-      <div class="sec-header reveal">
-        <span class="sec-num">02</span>
-        <h2 class="sec-title">Skills & Tools</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item reveal" style="--target:98%">
-          <div class="skill-item__top"><span class="skill-item__name">Luau / Lua</span><span class="skill-item__lvl">Expert</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:88%">
-          <div class="skill-item__top"><span class="skill-item__name">RemoteEvents & Networking</span><span class="skill-item__lvl">Advanced</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:85%">
-          <div class="skill-item__top"><span class="skill-item__name">UI / ScreenGui</span><span class="skill-item__lvl">Advanced</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:75%">
-          <div class="skill-item__top"><span class="skill-item__name">DataStore & Persistence</span><span class="skill-item__lvl">Intermediate+</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:87%">
-          <div class="skill-item__top"><span class="skill-item__name">PathfindingService / AI</span><span class="skill-item__lvl">Advanced</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:86%">
-          <div class="skill-item__top"><span class="skill-item__name">OOP / Module Scripts</span><span class="skill-item__lvl">Advanced</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:74%">
-          <div class="skill-item__top"><span class="skill-item__name">Anti-Exploit Patterns</span><span class="skill-item__lvl">Intermediate+</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:97%">
-          <div class="skill-item__top"><span class="skill-item__name">Roblox Studio</span><span class="skill-item__lvl">Expert</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-        <div class="skill-item reveal" style="--target:65%">
-          <div class="skill-item__top"><span class="skill-item__name">Python</span><span class="skill-item__lvl">Intermediate</span></div>
-          <div class="skill-item__track"><div class="skill-item__fill"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </article>
 
-  <!-- certs -->
-  <section class="section certs" id="certifications">
-    <div class="wrap">
-      <div class="sec-header reveal">
-        <span class="sec-num">03</span>
-        <h2 class="sec-title">Certifications</h2>
-      </div>
-      <div class="certs-layout">
-        <div class="cert-card reveal">
-          <div class="cert-card__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            Verified
-          </div>
-          <div class="cert-card__img">
-            <img src="python_cert.png" alt="freeCodeCamp Python Developer Certificate" loading="lazy" />
-          </div>
-          <div class="cert-card__body">
-            <h3 class="cert-card__title">Python Developer</h3>
-            <p class="cert-card__sub">freeCodeCamp — ~300 hours of coursework</p>
-            <div class="card__tags">
-              <span class="pill">Python</span>
-              <span class="pill">freeCodeCamp</span>
-              <span class="pill">300 hrs</span>
-              <span class="pill">June 2026</span>
+
+    <!-- skills tab -->
+
+    <article class="resume" data-page="skills">
+
+      <header>
+        <h2 class="h2 article-title">Skills</h2>
+      </header>
+
+      <section class="skill">
+
+        <h3 class="h3 skills-title">Scripting</h3>
+
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Lua / Roblox</h5>
+              <data value="95">95%</data>
             </div>
-            <a href="https://freecodecamp.org/certification/mintdevv/python-v9" class="cert-card__verify" target="_blank" rel="noopener">
-              Verify Certificate
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 95%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Python</h5>
+              <data value="82">82%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 82%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">JavaScript</h5>
+              <data value="65">65%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 65%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section class="skill">
+
+        <h3 class="h3 skills-title">Roblox Studio</h3>
+
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Game Architecture</h5>
+              <data value="90">90%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 90%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">AI / NPC Systems</h5>
+              <data value="85">85%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">DataStore / Backend</h5>
+              <data value="88">88%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 88%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Anti-Cheat Design</h5>
+              <data value="80">80%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 80%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section class="skill">
+
+        <h3 class="h3 skills-title">Tools & Other</h3>
+
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Git / GitHub</h5>
+              <data value="75">75%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 75%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Data Analytics</h5>
+              <data value="70">70%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">OS Automation (Python)</h5>
+              <data value="72">72%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 72%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- tech tags -->
+      <section class="tag-section">
+        <h3 class="h3 skills-title">Tech I use</h3>
+        <div class="tag-cloud content-card">
+          <span>Lua</span><span>Python</span><span>Roblox Studio</span><span>PathfindingService</span>
+          <span>DataStore2</span><span>VoiceService</span><span>RemoteEvents</span><span>FSM</span>
+          <span>Anti-Cheat</span><span>pcall</span><span>task.spawn</span><span>Git</span>
+          <span>Pandas</span><span>NumPy</span><span>OS Automation</span>
+        </div>
+      </section>
+
+    </article>
+
+
+    <!-- projects -->
+
+    <article class="portfolio" data-page="projects">
+
+      <header>
+        <h2 class="h2 article-title">Projects</h2>
+      </header>
+
+      <section class="projects">
+
+        <ul class="filter-list">
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Systems</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>AI / NPC</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Security</button>
+          </li>
+        </ul>
+
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-selecct-value>Select category</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item"><button data-select-item>All</button></li>
+            <li class="select-item"><button data-select-item>Systems</button></li>
+            <li class="select-item"><button data-select-item>AI / NPC</button></li>
+            <li class="select-item"><button data-select-item>Security</button></li>
+          </ul>
+        </div>
+
+        <ul class="project-list">
+
+          <!-- muting system -->
+          <li class="project-item active" data-filter-item data-category="systems">
+            <button class="proj-btn" data-video="./assets/Muting_System.mp4" data-title="Muting System">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/Muting_System.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">Muting System</h3>
+              <p class="project-category">Systems · Live ↗</p>
+            </button>
+          </li>
+
+          <!-- pathfinding bot -->
+          <li class="project-item active" data-filter-item data-category="ai / npc">
+            <button class="proj-btn" data-video="./assets/Pathfinding_Bot.mp4" data-title="Pathfinding Bot">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/Pathfinding_Bot.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">Pathfinding Bot</h3>
+              <p class="project-category">AI / NPC</p>
+            </button>
+          </li>
+
+          <!-- smart movement -->
+          <li class="project-item active" data-filter-item data-category="systems">
+            <button class="proj-btn" data-video="./assets/Smart_Movement.mp4" data-title="Smart Movement">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/Smart_Movement.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">Smart Movement</h3>
+              <p class="project-category">Systems</p>
+            </button>
+          </li>
+
+          <!-- anti-cheat -->
+          <li class="project-item active" data-filter-item data-category="security">
+            <button class="proj-btn" data-video="./assets/Server-Side_Anti-Cheat.mp4" data-title="Server-Side Anti-Cheat">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/Server-Side_Anti-Cheat.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">Server-Side Anti-Cheat</h3>
+              <p class="project-category">Security</p>
+            </button>
+          </li>
+
+          <!-- datastore coins -->
+          <li class="project-item active" data-filter-item data-category="systems">
+            <button class="proj-btn" data-video="./assets/DataStore_Coin_System.mp4" data-title="DataStore Coin System">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/DataStore_Coin_System.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">DataStore Coin System</h3>
+              <p class="project-category">Systems</p>
+            </button>
+          </li>
+
+          <!-- arena ai -->
+          <li class="project-item active" data-filter-item data-category="ai / npc">
+            <button class="proj-btn" data-video="./assets/1v1_Arena_Combat_AI.mp4" data-title="1v1 Arena & Combat AI">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                <video src="./assets/1v1_Arena_Combat_AI.mp4" muted playsinline preload="metadata" class="proj-thumb-vid"></video>
+              </figure>
+              <h3 class="project-title">1v1 Arena &amp; Combat AI</h3>
+              <p class="project-category">AI / NPC</p>
+            </button>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+    <!-- certs tab -->
+
+    <article class="portfolio" data-page="certificates">
+
+      <header>
+        <h2 class="h2 article-title">Certificates</h2>
+      </header>
+
+      <section class="projects">
+
+        <ul class="filter-list">
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Python</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Data</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Support</button>
+          </li>
+        </ul>
+
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-selecct-value>Select category</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item"><button data-select-item>All</button></li>
+            <li class="select-item"><button data-select-item>Python</button></li>
+            <li class="select-item"><button data-select-item>Data</button></li>
+            <li class="select-item"><button data-select-item>Support</button></li>
+          </ul>
+        </div>
+
+        <ul class="project-list">
+
+          <li class="project-item active" data-filter-item data-category="python">
+            <a href="https://freecodecamp.org/certification/mintdevv/python-v9" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-freecodecamp.png" alt="freeCodeCamp Python Developer Certificate" loading="lazy">
+              </figure>
+              <h3 class="project-title">Python Developer</h3>
+              <p class="project-category">freeCodeCamp · Jun 2026</p>
             </a>
-          </div>
-        </div>
+          </li>
 
-        <div class="cert-aside reveal d1">
-          <h3>What this means</h3>
-          <p>Beyond Luau, I hold a verified Python Developer certification from freeCodeCamp — roughly 300 hours of structured coursework covering scripting, data structures, and automation. It means I can bridge game scripting with backend tooling when a project needs it.</p>
-          <div class="cert-stat">
-            <span class="cert-stat__n">300</span>
-            <span class="cert-stat__l">hours of coursework</span>
-          </div>
-          <div class="cert-stat">
-            <span class="cert-stat__n">June</span>
-            <span class="cert-stat__l">2026 — recently issued</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <li class="project-item active" data-filter-item data-category="python">
+            <a href="https://coursera.org/verify/9CMUZLWWO4I9" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-python-crash.jpg" alt="Crash Course on Python" loading="lazy">
+              </figure>
+              <h3 class="project-title">Crash Course on Python</h3>
+              <p class="project-category">Google / Coursera · Jun 2026</p>
+            </a>
+          </li>
 
-  <!-- contact -->
-  <section class="section contact" id="contact">
-    <div class="contact__bg" aria-hidden="true"></div>
-    <div class="contact__overlay" aria-hidden="true"></div>
-    <div class="wrap contact__inner">
-      <div class="reveal">
-        <p class="contact__eyebrow">Open to work</p>
-        <h2 class="contact__h2">
-          Let's<br>
-          <span class="gr">build</span><br>
-          something.
-        </h2>
-        <p class="contact__sub">Open to freelance scripting work,<br> studio collabs, and game dev roles.</p>
-      </div>
-      <div class="contact__links">
-        <a href="https://www.roblox.com/games/138606822153563/Ragebait-VC" target="_blank" rel="noopener" class="clink reveal">
-          <div class="clink__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div class="clink__body">
-            <span class="clink__label">Live Game</span>
-            <span class="clink__val">Ragebait VC on Roblox</span>
-          </div>
-          <svg class="clink__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </a>
+          <li class="project-item active" data-filter-item data-category="python">
+            <a href="https://coursera.org/verify/CC1WZPEBN9ZJ" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-python-os.jpg" alt="Using Python to Interact with the OS" loading="lazy">
+              </figure>
+              <h3 class="project-title">Python to Interact with OS</h3>
+              <p class="project-category">Google / Coursera · Jun 2026</p>
+            </a>
+          </li>
 
-        <button class="clink reveal" id="discordCopy" aria-label="Copy Discord username">
-          <div class="clink__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="clink__body">
-            <span class="clink__label">Discord — click to copy</span>
-            <span class="clink__val" id="discordValue">kungfupandamaster</span>
-          </div>
-          <svg class="clink__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        </button>
+          <li class="project-item active" data-filter-item data-category="support">
+            <a href="https://coursera.org/verify/SIGE7VLKAI0K" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-tech-support.jpg" alt="Technical Support Fundamentals" loading="lazy">
+              </figure>
+              <h3 class="project-title">Tech Support Fundamentals</h3>
+              <p class="project-category">Google / Coursera · Jun 2026</p>
+            </a>
+          </li>
 
-        <a href="https://www.roblox.com/users/3128640302/profile" target="_blank" rel="noopener" class="clink reveal">
-          <div class="clink__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div class="clink__body">
-            <span class="clink__label">Roblox Profile</span>
-            <span class="clink__val">View on Roblox</span>
-          </div>
-          <svg class="clink__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
+          <li class="project-item active" data-filter-item data-category="data">
+            <a href="https://coursera.org/verify/QW4XNSFIEО6M" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-biz-analytics.jpg" alt="Applied Business Analytics" loading="lazy">
+              </figure>
+              <h3 class="project-title">Applied Business Analytics</h3>
+              <p class="project-category">Univ. Illinois / Coursera · Jun 2026</p>
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item data-category="data">
+            <a href="https://coursera.org/verify/UKW4K629W8DM" target="_blank" rel="noopener">
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/cert-data-accounting.jpg" alt="Data Analytics in Accounting" loading="lazy">
+              </figure>
+              <h3 class="project-title">Data Analytics in Accounting</h3>
+              <p class="project-category">Univ. Illinois / Coursera · Jun 2026</p>
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+    <!-- contact -->
+
+    <article class="contact" data-page="contact">
+
+      <header>
+        <h2 class="h2 article-title">Contact</h2>
+      </header>
+
+      <section class="contact-links">
+        <h3 class="h3 skills-title">Hit me up</h3>
+
+        <ul class="contact-link-list content-card">
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="chatbubble-outline"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">Discord</h4>
+              <button class="contact-link copy-discord" data-copy="kungfupandamaster">
+                kungfupandamaster <span class="copy-hint">click to copy</span>
+              </button>
+            </div>
+          </li>
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">GitHub</h4>
+              <a href="https://github.com/xtinctl3gend-cpu" target="_blank" class="contact-link-val">xtinctl3gend-cpu ↗</a>
+            </div>
+          </li>
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="game-controller-outline"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">Roblox Profile</h4>
+              <a href="https://www.roblox.com/users/3128640302/profile" target="_blank" class="contact-link-val">mint.devv ↗</a>
+            </div>
+          </li>
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">freeCodeCamp</h4>
+              <a href="https://www.freecodecamp.org/mintdevv" target="_blank" class="contact-link-val">mintdevv ↗</a>
+            </div>
+          </li>
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="game-controller-outline"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">Live Game</h4>
+              <a href="https://www.roblox.com/games/138606822153563/Ragebait-VC" target="_blank" class="contact-link-val">Ragebait VC ↗</a>
+            </div>
+          </li>
+
+          <li class="contact-link-item">
+            <div class="icon-box">
+              <ion-icon name="link-outline"></ion-icon>
+            </div>
+            <div class="contact-link-info">
+              <h4 class="h4">guns.lol</h4>
+              <a href="https://guns.lol/mintdevv" target="_blank" class="contact-link-val">guns.lol/mintdevv ↗</a>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section class="contact-cta-section">
+        <p>Building something on Roblox? Need a Lua dev who ships fast and writes clean server-side code?</p>
+        <a href="https://discord.com/users/kungfupandamaster" target="_blank" class="btn-violet">Hit me on Discord</a>
+      </section>
+
+    </article>
+
+  </div>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap footer__inner">
-    <span class="footer__avail"><span class="footer__dot"></span> Available for work</span>
-    <a href="#" class="footer__logo">// mint.devv</a>
-    <span class="footer__cr">Roblox Developer · Lua Scripter</span>
+<!-- video modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-overlay" id="videoOverlay"></div>
+  <div class="video-modal-inner">
+    <button class="video-modal-close" id="videoClose" aria-label="Close video">
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+    <h3 class="video-modal-title" id="videoTitle"></h3>
+    <video id="modalVideo" controls playsinline></video>
   </div>
-</footer>
+</div>
 
-<script src="script.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
+
+<!-- toast notification -->
+<div class="toast-msg" id="toastMsg" role="status" aria-live="polite"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/script.js"></script>
+
 </body>
 </html>
